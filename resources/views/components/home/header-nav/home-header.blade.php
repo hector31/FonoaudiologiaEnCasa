@@ -10,16 +10,33 @@
             <li><a href="{{ URL::route('home') }}#about">Sobre Nostros</a></li>
             <li><a href="{{ URL::route('home') }}#services">Servicios</a></li>
             <li><a href="{{ URL::route('home') }}#portfolio">Posts</a></li>
+            <li class="drop-down"><a href="#">Blog</a>
+                <ul>
+                    <li><a href="{{route('home.fono-tips')}}">Fono Tips</a></li>
+                    <li><a href="{{route('home.videos')}}">Videos</a></li>
+                    <li><a href="{{route('home.imprimibles')}}">Imprimibles</a></li>
+                    <li><a href="{{route('home.noticias')}}">Fonoaudiologia hoy</a></li>
+                </ul>
+            </li>
             <li><a href="{{ URL::route('home') }}#team">Equipo</a></li>
-        <li class="drop-down"><a href="#">Blog</a>
-            <ul>
-            <li><a href="{{route('home.fono-tips')}}">Fono Tips</a></li>
-            <li><a href="{{route('home.videos')}}">Videos</a></li>
-            <li><a href="{{route('home.imprimibles')}}">Imprimibles</a></li>
-            <li><a href="{{route('home.noticias')}}">Fonoaudiologia hoy</a></li>
-            </ul>
-        </li>
-        <li><a href="#footer">Contacta nos</a></li>
+            <li class="drop-down"><a href="#">Cuenta</a>
+                <ul>
+                    @if(Auth::check())
+                        <li class="nav-item">
+                            <a href="{{route('admin.index')}}" >Administrador</a>
+                        </li>
+                    @else
+                        
+                        <li class="nav-item">
+                            <a href="/login" >Ingresar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/register" >Registrarse</a>
+                        </li>
+                    @endif
+                </ul>
+            </li>
+            <li><a href="#footer">Contacta nos</a></li>
         </ul>
     </nav><!-- .main-nav-->
 

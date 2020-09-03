@@ -71,7 +71,7 @@
         </div>
 
         <div class="col-md-6 intro-img order-md-last order-first" data-aos="zoom-out" data-aos-delay="200">
-          <img src="img/intro-img.svg" alt="" class="img-fluid">
+          <img src="{{asset('img/intro-img.svg')}}" alt="" class="img-fluid">
         </div>
       </div>
 

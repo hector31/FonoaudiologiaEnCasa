@@ -69,7 +69,7 @@
         </section><!-- End Features Section -->
     
         <!-- ======= Posts Section ======= -->
-        <x-home.main.home-posts></x-home.posts-nav.home-header>
+        <x-home.main.posts :posts="$posts"></x-home.main.posts>
         
         <!-- ======= Testimonials Section ======= -->
         <x-home.main.home-comentarios></x-home.comentarios-nav.home-header>
