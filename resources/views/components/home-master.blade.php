@@ -26,6 +26,7 @@
 
   <!-- Template Main CSS File -->
   <link href="{{asset('css/style.css')}}" rel="stylesheet">
+  <link href="{{asset('css/style2.css')}}" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Rapid - v2.2.0
@@ -71,7 +72,7 @@
         </div>
 
         <div class="col-md-6 intro-img order-md-last order-first" data-aos="zoom-out" data-aos-delay="200">
-          <img src="{{asset('img/intro-img.svg')}}" alt="" class="img-fluid">
+          <img src="{{asset('img/fono/image-main3.png')}}" alt="" class="img-fluid ml-4 main-img">
         </div>
       </div>
 
@@ -191,7 +192,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>Rapid</strong>. All Rights Reserved
+        &copy; Copyright <strong>Fonoencasa</strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!--
@@ -200,7 +201,7 @@
         Licensing information: https://bootstrapmade.com/license/
         Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Rapid
       -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by <a href="https://inghectornarvaez.com/">IngHectorNarvaez</a>
       </div>
     </div>
   </footer><!-- End  Footer -->
