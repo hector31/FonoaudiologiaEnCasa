@@ -10,7 +10,7 @@
         <!-- ======= Why Us Section ======= -->
         <x-home.main.home-whyus></x-home.whyus-nav.home-header>
         
-        <!-- ======= Call To Action Section ======= -->
+        {{-- <!-- ======= Call To Action Section ======= -->
         <section id="call-to-action" class="call-to-action">
             <div class="container" data-aos="zoom-out">
                 <div class="row">
@@ -67,7 +67,7 @@
     
           </div>
         </section><!-- End Features Section -->
-    
+     --}}
         <!-- ======= Posts Section ======= -->
         <x-home.main.posts :posts="$posts"></x-home.main.posts>
         
@@ -79,7 +79,7 @@
         
     
         <!-- ======= Clients Section ======= -->
-        <section id="clients" class="clients">
+        {{-- <section id="clients" class="clients">
             <div class="container" data-aos="zoom-in">
         
                 <header class="section-header">
@@ -99,9 +99,9 @@
         
             </div>
         </section><!-- End Clients Section -->
-    
+     --}}
         <!-- ======= Pricing Section ======= -->
-        <section id="pricing" class="pricing section-bg wow fadeInUp">
+        {{-- <section id="pricing" class="pricing section-bg wow fadeInUp">
     
           <div class="container" data-aos="fade-up">
     
@@ -178,7 +178,7 @@
             </div>
           </div>
     
-        </section><!-- End Pricing Section -->
+        </section><!-- End Pricing Section --> --}}
     
         <!-- ======= F.A.Q Section ======= -->
         <x-home.main.home-questions></x-home.questions-nav.home-header>

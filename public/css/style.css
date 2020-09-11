@@ -1633,3 +1633,19 @@ section {
 #footer .credits a:hover {
   color: #0a98c0;
 }
+.justificar{
+  text-align: justify;
+  text-justify: inter-word;
+}
+.img-servicios{
+  width: 120px;
+  padding-bottom: 40px;
+}
+#services .description{
+  text-align: justify;
+  text-justify: inter-word;
+}
+.img-testimonios{
+  width: 500px;
+  padding-left:150px ;
+}

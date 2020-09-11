@@ -21,8 +21,14 @@
   
             <div class="owl-carousel portfolio-details-carousel">
               <img src="{{$post->post_image}}" class="img-fluid" alt="">
-              <img src="{{$post->post_second_image}}" class="img-fluid" alt="">
-              <img src="{{asset('img/portfolio/portfolio-details-3.jpg')}}" class="img-fluid" alt="">
+              @if ($post->post_second_image!=null)
+                <img src="{{$post->post_second_image}}" class="img-fluid" alt="">
+              @endif
+
+                
+              @if ($post->post_third_image!=null)
+                <img src="{{$post->post_third_image}}" class="img-fluid" alt="">
+              @endif
             </div>
   
             {{-- <div class="portfolio-info">

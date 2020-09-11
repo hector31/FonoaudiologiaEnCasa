@@ -1,8 +1,8 @@
 <section id="faq" class="faq">
     <div class="container" data-aos="fade-up">
       <header class="section-header">
-        <h3>Frequently Asked Questions</h3>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        <h3>Preguntas Frecuentes</h3>
+        {{-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p> --}}
       </header>
 
       <ul id="faq-list" data-aos="fade-up" data-aos-delay="100">

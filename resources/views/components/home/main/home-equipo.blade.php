@@ -2,7 +2,7 @@
     <div class="container" data-aos="fade-up">
       <div class="section-header">
         <h3>Equipo</h3>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        {{-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p> --}}
       </div>
 
       <div class="row">

@@ -62,7 +62,7 @@
     <div class="container d-flex h-100">
       <div class="row justify-content-center align-self-center" data-aos="fade-up">
         <div class="col-md-6 intro-info order-md-first order-last" data-aos="zoom-in" data-aos-delay="100">
-          <h2>Fonoaudiologia<br>En <span>Casa!</span></h2>
+          <h2>Fonoaudiologia<br>En <span>Casa</span></h2>
 
          
 
@@ -72,7 +72,7 @@
         </div>
 
         <div class="col-md-6 intro-img order-md-last order-first" data-aos="zoom-out" data-aos-delay="200">
-          <img src="{{asset('img/fono/image-main3.png')}}" alt="" class="img-fluid ml-4 main-img">
+          <img src="{{asset('img/fono/portada-principal.png')}}" alt="" class="img-fluid ml-4 main-img">
         </div>
       </div>
 
@@ -93,11 +93,11 @@
           <div class="col-lg-6">
 
             <div class="row">
-
+{{-- 
               <div class="col-sm-6">
 
                 <div class="footer-info">
-                  <h3>Rapid</h3>
+                  <h3>Fono En Casa</h3>
                   <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
                 </div>
 
@@ -109,28 +109,25 @@
                   </form>
                 </div>
 
-              </div>
+              </div> --}}
 
               <div class="col-sm-6">
                 <div class="footer-links">
-                  <h4>Useful Links</h4>
+                  <h4>Navegacion</h4>
                   <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About us</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Terms of service</a></li>
-                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#about">Sobre Nosotros</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Publicaciones</a></li>
+                    <li><a href="#">Equipo</a></li>
                   </ul>
                 </div>
 
                 <div class="footer-links">
-                  <h4>Contact Us</h4>
+                  <h4>Contacta nos</h4>
                   <p>
-                    A108 Adam Street <br>
-                    New York, NY 535022<br>
-                    United States <br>
-                    <strong>Phone:</strong> +1 5589 55488 55<br>
-                    <strong>Email:</strong> info@example.com<br>
+                    <strong>Telefonos:</strong><br> (+57) 31841146625 <br> (+57) 310 5990524<br>
+                    <strong>Correo:</strong> fonoencasa@outlook.es<br>
                   </p>
                 </div>
 
@@ -151,34 +148,34 @@
 
             <div class="form">
 
-              <h4>Send us a message</h4>
-              <p>Eos ipsa est voluptates. Nostrum nam libero ipsa vero. Debitis quasi sit eaque numquam similique commodi harum aut temporibus.</p>
+              <h4>Envianos un mensaje</h4>
+              {{-- <p>Eos ipsa est voluptates. Nostrum nam libero ipsa vero. Debitis quasi sit eaque numquam similique commodi harum aut temporibus.</p> --}}
 
               <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                 <div class="form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Tu Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                   <div class="validate"></div>
                 </div>
                 <div class="form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Tu Correo" data-rule="email" data-msg="Please enter a valid email" />
                   <div class="validate"></div>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                   <div class="validate"></div>
                 </div>
                 <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensaje"></textarea>
                   <div class="validate"></div>
                 </div>
 
                 <div class="mb-3">
-                  <div class="loading">Loading</div>
+                  <div class="loading">Cargando</div>
                   <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <div class="sent-message">Tu mensaje ha sido enviado, gracias!</div>
                 </div>
 
-                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
+                <div class="text-center"><button type="submit" title="Send Message">Enviar Mensaje</button></div>
               </form>
 
             </div>

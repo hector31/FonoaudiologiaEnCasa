@@ -2,15 +2,15 @@
     <div class="container-fluid" data-aos="fade-up">
 
       <header class="section-header">
-        <h3>Why choose us?</h3>
-        <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
+        <h3>Testimonios</h3>
+        {{-- <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p> --}}
       </header>
 
       <div class="row">
 
         <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
           <div class="why-us-img">
-            <img src="img/why-us.jpg" alt="" class="img-fluid">
+            <img class="img-testimonios" src="{{asset('img/fono/main-image.png')}}" alt="" class="img-fluid">
           </div>
         </div>
 
@@ -53,24 +53,19 @@
     <div class="container">
       <div class="row counters" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="col-lg-3 col-6 text-center">
+        <div class="col-lg-4 col-6 text-center">
           <span data-toggle="counter-up">274</span>
-          <p>Clients</p>
+          <p>Pacientes</p>
         </div>
 
-        <div class="col-lg-3 col-6 text-center">
+        <div class="col-lg-4 col-6 text-center">
           <span data-toggle="counter-up">421</span>
-          <p>Projects</p>
+          <p>Asesorías</p>
         </div>
 
-        <div class="col-lg-3 col-6 text-center">
+        <div class="col-lg-4 col-6 text-center">
           <span data-toggle="counter-up">1,364</span>
-          <p>Hours Of Support</p>
-        </div>
-
-        <div class="col-lg-3 col-6 text-center">
-          <span data-toggle="counter-up">18</span>
-          <p>Hard Workers</p>
+          <p>Acompañamiento Escolar</p>
         </div>
 
       </div>
