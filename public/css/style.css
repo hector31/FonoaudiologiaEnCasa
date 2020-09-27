@@ -411,9 +411,9 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 100vh;
-  position: relative;
-  background: #f5f8fd url("../img/intro-bg.jpg") center top no-repeat;
+  /* height: 100vh; */
+  /* position: relative; */
+  background: #f5f8fd url("../img/fono/fondo.png") center top no-repeat fixed;
   background-size: cover;
 }
 
@@ -1648,4 +1648,72 @@ section {
 .img-testimonios{
   width: 500px;
   padding-left:150px ;
+}
+.logop{
+  width: 110px;
+  padding-top: 10px;
+}
+.tfono{
+  text-align: center;
+  letter-spacing: 2px;
+  padding-top: 90px;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+
+.centert {
+  padding: 70px 0;
+  text-align: center;
+}
+.centerall {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+.main-img{
+  height: 450px;
+  border-radius: 90px;
+  margin: 0 !important;
+}
+
+.contmain{
+  padding-top: 190px;
+}
+p,ul {
+  font-family: century-gothic;
+  font-size: 1.3em;
+  /* font-weight: 400; */
+}
+.main-nav a{
+  font-family: century-gothic;
+  font-size: 0.8em;
+}
+#services .description {
+  font-size: 1em;
+}
+.background-page {
+  width: 100%;
+  /* height: 100vh; */
+  /* position: relative; */
+  background: #f5f8fd url("../img/fono/fondo.png") center top no-repeat fixed;
+  background-size: cover;
+}
+
+@media (max-width: 767px) {
+  .logop{
+    width: 90px;
+  }
+}
+@media (max-width: 992px) {
+  #hero .intro-info h2 {
+ 
+    font-size: 40px ;
+
+  }
+  .main-img{
+  
+    height: 350px;
+  }
+  
 }

@@ -1,4 +1,4 @@
-<section id="portfolio" class="portfolio section-bg">
+<section id="portfolio" class="portfolio background-page">
     <div class="container" data-aos="fade-up">
 
       <header class="section-header">
@@ -40,4 +40,5 @@
     </div>
 
     </div>
+    
   </section><!-- End Portfolio Section -->

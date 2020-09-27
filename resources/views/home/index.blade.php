@@ -7,8 +7,11 @@
             <!-- ======= Services Section ======= -->
         <x-home.main.home-services></x-home.services-nav.home-header>
     
-        <!-- ======= Why Us Section ======= -->
-        <x-home.main.home-whyus></x-home.whyus-nav.home-header>
+          <!-- ======= Team Section ======= -->
+        <x-home.main.home-equipo></x-home.equipo-nav.home-header>
+        
+        <!-- ======= Galery Section ======= -->
+        <x-home.main.home-galeria :posts="$posts"></x-home.main.home-galeria>
         
         {{-- <!-- ======= Call To Action Section ======= -->
         <section id="call-to-action" class="call-to-action">
@@ -74,8 +77,6 @@
         <!-- ======= Testimonials Section ======= -->
         <x-home.main.home-comentarios></x-home.comentarios-nav.home-header>
         
-        <!-- ======= Team Section ======= -->
-        <x-home.main.home-equipo></x-home.equipo-nav.home-header>
         
     
         <!-- ======= Clients Section ======= -->

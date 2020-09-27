@@ -1,4 +1,4 @@
-<section id="services" class="services section-bg">
+<section id="services" class="services section-bg background-page">
     <div class="container" data-aos="fade-up">
 
       <header class="section-header">

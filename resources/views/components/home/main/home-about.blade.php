@@ -1,11 +1,11 @@
-<section id="about" class="about">
+<section id="about" class="about background-page">
 
     <div class="container" data-aos="fade-up">
       <div class="row">
 
         <div class="col-lg-5 col-md-6">
           <div class="about-img" data-aos="fade-right" data-aos-delay="100">
-            <img src="img/fono/main-image2.png" alt="">
+            <img src="img/fono/sobre-nosotros.png" alt="">
           </div>
         </div>
 
@@ -20,7 +20,7 @@
               <li><i class="ion-android-checkmark-circle"></i>Recursos gratuitos.</li>
               <li><i class="ion-android-checkmark-circle"></i>Asesorías.</li>
             </ul>
-            <p class="justificar">Fonoaudiología en casa te ofrece diferentes estrategias para potenciar el desarrollo de tu hijo, información para profesionales, padres de familia y comunidad en general.</p>
+            {{-- <p class="justificar">Fonoaudiología en casa te ofrece diferentes estrategias para potenciar el desarrollo de tu hijo, información para profesionales, padres de familia y comunidad en general.</p> --}}
           </div>
         </div>
       </div>

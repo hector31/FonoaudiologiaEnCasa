@@ -1,4 +1,4 @@
-<section id="faq" class="faq">
+<section id="faq" class="faq background-page">
     <div class="container" data-aos="fade-up">
       <header class="section-header">
         <h3>Preguntas Frecuentes</h3>

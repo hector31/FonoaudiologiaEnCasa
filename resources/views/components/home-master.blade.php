@@ -10,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{asset('img/favicon.png')}}" rel="icon">
-  <link href="{{asset('img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+  <link href="{{asset('img/fonoencasa_logo.png')}}" rel="icon">
+  <link href="{{asset('img/fonoencasa_logo.png')}}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
@@ -59,20 +59,15 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="clearfix">
-    <div class="container d-flex h-100">
-      <div class="row justify-content-center align-self-center" data-aos="fade-up">
+    <div class="container h-100">
+      <div class="row justify-content-center align-self-center contmain" data-aos="fade-up">
+
         <div class="col-md-6 intro-info order-md-first order-last" data-aos="zoom-in" data-aos-delay="100">
-          <h2>Fonoaudiologia<br>En <span>Casa</span></h2>
-
-         
-
-          {{-- <div>
-            <a href="#about" class="btn-get-started scrollto">Empecemos</a>
-          </div> --}}
+          <h2 class="tfono centert">Fonoaudiologia <br> En <br><span>Casa</span></h2>
         </div>
 
-        <div class="col-md-6 intro-img order-md-last order-first" data-aos="zoom-out" data-aos-delay="200">
-          <img src="{{asset('img/fono/portada-principal.png')}}" alt="" class="img-fluid ml-4 main-img">
+        <div class="col-md-6 intro-img order-md-last order-first " data-aos="zoom-out" data-aos-delay="200">
+          <img src="{{asset('img/fono/portada-principal2.png')}}" alt="" class="img-fluid ml-4 main-img">
         </div>
       </div>
 
@@ -124,7 +119,7 @@
                 </div>
 
                 <div class="footer-links">
-                  <h4>Contacta nos</h4>
+                  <h4>Contactanos</h4>
                   <p>
                     <strong>Telefonos:</strong><br> (+57) 31841146625 <br> (+57) 310 5990524<br>
                     <strong>Correo:</strong> fonoencasa@outlook.es<br>
