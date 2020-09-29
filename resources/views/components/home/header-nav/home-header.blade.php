@@ -1,6 +1,6 @@
 <div class="container d-flex align-items-center">
 
-    <h1 class=" mr-auto"><a href="{{ route('home') }}"><img class="img-fluid logop" src="img/fonoencasa_logo.png" alt=""></a></h1>
+    <h1 class=" mr-auto titulologo"><a href="{{ route('home') }}"><img class="img-fluid logop" src="img/fonoencasa_logo.png" alt=""></a></h1>
     <!-- Uncomment below if you prefer to use an image logo -->
     <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 

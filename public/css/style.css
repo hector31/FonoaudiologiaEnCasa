@@ -8,6 +8,15 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'Ananias';
+  src: url('../fonts/Ananias.ttf');
+}
+@font-face {
+  font-family: 'ArchitectsDaughter';
+  src: url('../fonts/ArchitectsDaughter.ttf');
+
+}
 body {
   background: #fff;
   color: #444;
@@ -31,7 +40,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Montserrat", sans-serif;
+  font-family:'Ananias', "Montserrat", sans-serif;
   font-weight: 400;
   margin: 0 0 20px 0;
   padding: 0;
@@ -230,7 +239,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 0;
   transition: 0.3s;
   font-size: 14px;
-  font-family: "Open Sans", sans-serif;
+  font-family:'Ananias', "Open Sans", sans-serif;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -413,8 +422,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   /* height: 100vh; */
   /* position: relative; */
-  background: #f5f8fd url("../img/fono/fondo.png") center top no-repeat fixed;
-  background-size: cover;
+  background: white url("../img/fono/fondo.png") center bottom no-repeat fixed;
+  background-size: 100% 90%;;
 }
 
 @media (max-width: 767px) {
@@ -495,7 +504,7 @@ section {
   text-align: center;
   font-weight: 700;
   position: relative;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Ananias',"Montserrat", sans-serif;
 }
 
 .section-header p {
@@ -531,7 +540,7 @@ section {
 
 #about .about-content h2 {
   color: #413e66;
-  font-family: "Montserrat", sans-serif;
+  font-family:'Ananias', "Montserrat", sans-serif;
   font-weight: 700;
 }
 
@@ -1680,14 +1689,19 @@ section {
 .contmain{
   padding-top: 190px;
 }
+
 p,ul {
-  font-family: century-gothic;
-  font-size: 1.3em;
+  font-family: 'ArchitectsDaughter',century-gothic;
+  font-size: 1.2em;
   /* font-weight: 400; */
 }
 .main-nav a{
-  font-family: century-gothic;
+  font-family: 'Ananias',century-gothic;
   font-size: 0.8em;
+}
+#faq #faq-list a{
+  font-family: 'ArchitectsDaughter',century-gothic;
+  font-size: 0.9em;
 }
 #services .description {
   font-size: 1em;
@@ -1696,13 +1710,21 @@ p,ul {
   width: 100%;
   /* height: 100vh; */
   /* position: relative; */
-  background: #f5f8fd url("../img/fono/fondo.png") center top no-repeat fixed;
-  background-size: cover;
+  background: white url("../img/fono/fondo.png") center bottom no-repeat fixed;
+  background-size: 100% 90%;
+  
 }
 
 @media (max-width: 767px) {
   .logop{
     width: 90px;
+  }
+  .main-img{
+    padding-top: 0;
+   
+  }
+  .contmain{
+    padding-top: 40px;
   }
 }
 @media (max-width: 992px) {
@@ -1712,8 +1734,9 @@ p,ul {
 
   }
   .main-img{
-  
     height: 350px;
   }
+ 
+ 
   
 }

@@ -1,4 +1,36 @@
 
+@font-face {
+    font-family: 'ArchitecsDaughter';
+    src: url('/fonts/ArchitecsDaughter.ttf');
+  }
+#hero .intro-info h2 {
+    font-family: 'Ananias';
+    font-size: 1.9em;
+    /* font-weight: 400; */
+  }
 #team .member .member-info{
     padding: 65px 0px;
 }
+
+#header {
+    padding: 0;
+}
+.logop{
+    padding: 0;
+}
+.titulologo{
+    padding: 0;
+    margin-bottom:0 !important ;
+}
+.mobile-nav-toggle{
+    font-size: 50px;
+}
+
+@media (max-width: 340px) {
+    #hero .intro-info h2 {
+      font-size: 1.4em;
+    }
+    #about{
+        padding-top: 0px;
+    }
+  }
