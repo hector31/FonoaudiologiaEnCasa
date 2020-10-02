@@ -15,6 +15,13 @@ class UserController extends Controller
         return view('admin.users.index',['users'=>$users]);
     }
 
+    public function login(){
+        return view('auth.login');
+    }
+    public function register(){
+        return view('auth.register');
+    }
+
     public function show(User $user){
         return view('admin.users.profile',[
             'user'=>$user,

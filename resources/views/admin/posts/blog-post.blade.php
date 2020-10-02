@@ -8,7 +8,7 @@
             <li><a href="{{route('home')}}">Inicio</a></li>
             <li>Post</li>
           </ol>
-          <h2>{{$post->title}}</h2>
+          <h2 id="titulo-post">{{$post->title}}</h2>
   
         </div>
       </section><!-- End Breadcrumbs -->
@@ -46,9 +46,9 @@
           <div class="portfolio-description mb-5">
             <h2>{{$post->title}}</h2>
             <h4>{{$post->user->name}}</h4>
-            <p>
-                {{$post->body}}
-            </p>
+            
+                {!! $post->body !!}
+            
 
             <a href="{{$post->link}}">{{$post->link}}</a>
           </div>

@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-
+Route::get('/login','UserController@login')->name('users.login');
+Route::get('/registrarse','UserController@register')->name('users.register');
 
 Route::put('/users/{user}/update','UserController@update')->name('user.profile.update');
 Route::delete('/users/{user}/destroy','UserController@destroy')->name('user.destroy');

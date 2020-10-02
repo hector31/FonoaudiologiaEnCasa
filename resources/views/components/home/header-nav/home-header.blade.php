@@ -28,10 +28,10 @@
                     @else
                         
                         <li class="nav-item">
-                            <a href="/login" >Ingresar</a>
+                            <a href="{{route('users.login')}}" >Ingresar</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/register" >Registrarse</a>
+                            <a href="{{route('users.register')}}" >Registrarse</a>
                         </li>
                     @endif
                 </ul>

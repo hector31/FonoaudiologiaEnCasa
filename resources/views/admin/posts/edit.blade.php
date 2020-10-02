@@ -32,10 +32,18 @@
             <input type="file" name="post_third_image" class="form-control-file" id="post_third_image" >
         </div>
         <div class="form-group">
-            <textarea name="body" class="form-control" id="body"  cols="30" rows="10">{{$post->body}}</textarea>
+            <textarea name="body" class="form-control" id="body"  cols="30" rows="10">{!!$post->body!!}</textarea>
         </div>
+        
         <button type="submit" class="btn btn-primary">Actualizar</button>
         </form>
         
     @endsection
 </x-admin-master>
+<script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+<script>
+    CKEDITOR.replace( 'body', {
+        filebrowserUploadUrl: "{{route('upload', ['_token' => csrf_token() ])}}",
+        filebrowserUploadMethod: 'form'
+    });
+</script>

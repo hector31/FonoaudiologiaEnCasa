@@ -20,3 +20,5 @@ Route::middleware('auth')->group(function(){
     Route::get('/admin', 'AdminsController@index')->name('admin.index');
 });
 
+Route::resource('editor','CKEditorController');
+Route::post('ckeditor/image_upload', 'CKEditorController@upload')->name('upload');

@@ -17,6 +17,11 @@
   src: url('../fonts/ArchitectsDaughter.ttf');
 
 }
+@font-face {
+  font-family: 'tekton-pro';
+  src: url('../fonts/TektonPro-Regular.otf');
+
+}
 body {
   background: #fff;
   color: #444;
@@ -1691,9 +1696,10 @@ section {
 }
 
 p,ul {
-  font-family: 'ArchitectsDaughter',century-gothic;
+  font-family: 'tekton-pro',century-gothic;
   font-size: 1.2em;
-  /* font-weight: 400; */
+  font-weight: bold;
+  
 }
 .main-nav a{
   font-family: 'Ananias',century-gothic;

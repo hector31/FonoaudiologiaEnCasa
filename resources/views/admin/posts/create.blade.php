@@ -1,4 +1,6 @@
 <x-admin-master>
+    <script src="https://cdn.ckeditor.com/4.15.0/full/ckeditor.js"></script>
+
     @section('content')
         <h1>Crear post</h1>
         <form method="post" action="{{route('posts.store')}}" enctype="multipart/form-data">
@@ -20,18 +22,23 @@
                 <label for="file">Foto 3 (opcional)</label>
                 <input type="file" name="post_third_image" class="form-control-file" id="post_third_image" >
             </div>
-            <div class="form-group">
-                <label for="link">Link</label>
-                <input type="text" name="link" class="form-control" id="link" aria-describedby="" placeholder="Ingresa un link (opcional)">
-            </div>
-            <div class="form-group">
-                <label for="video">Video</label>
-                <input type="text" name="video" class="form-control" id="video" aria-describedby="" placeholder="Ingresa un link de video de youtube (opcional)">
-            </div>
-            <div class="form-group">
+            
+            {{-- <div class="form-group">
                 <textarea name="body" class="form-control" id="body" cols="30" rows="10"></textarea>
+            </div> --}}
+            <div class="form-group">
+                <textarea name="body" class="form-control" id="body" name="summary-ckeditor"></textarea>
             </div>
+            
+            
             <button type="submit" class="btn btn-primary">Crear</button>
         </form>
     @endsection
 </x-admin-master>
+<script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+<script>
+    CKEDITOR.replace( 'body', {
+        filebrowserUploadUrl: "{{route('upload', ['_token' => csrf_token() ])}}",
+        filebrowserUploadMethod: 'form'
+    });
+</script>

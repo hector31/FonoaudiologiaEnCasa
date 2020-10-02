@@ -26,7 +26,7 @@
                 <h4><a href="{{route('post',$post->id)}}">{{Str::limit($post->title,'10','...')}}</a></h4>
                 <p><p>{{Str::limit($post->body,'20','...')}}</p></p>
                 <div>
-                  <a href="{{$post->post_image}}" data-gall="portfolioGallery" title="{{$post->title}}" class="link-preview venobox"><i class="ion ion-eye"></i></a>
+                  <a href="{{$post->post_image}}#titulo-post" data-gall="portfolioGallery" title="{{$post->title}}" class="link-preview venobox"><i class="ion ion-eye"></i></a>
                   <a href="{{route('post',$post->id)}}" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
                 <div>
