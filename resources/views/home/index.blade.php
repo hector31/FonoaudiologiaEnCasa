@@ -11,7 +11,7 @@
         <x-home.main.home-equipo></x-home.equipo-nav.home-header>
         
         <!-- ======= Galery Section ======= -->
-        <x-home.main.home-galeria :posts="$posts"></x-home.main.home-galeria>
+        <x-home.main.home-galeria :galery_posts="$galery_posts"></x-home.main.home-galeria>
         
         {{-- <!-- ======= Call To Action Section ======= -->
         <section id="call-to-action" class="call-to-action">

@@ -5,28 +5,35 @@
         <h3 class="section-title">Galeria</h3>
       </header>
 
-    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-        @foreach ($posts as $num=>$post)
+  @foreach ($galeryPosts as $num=>$galery_post)
+      @if(($num+1)%4==0||$num==0)
+    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
+      
+      @endif
           <div class="col-lg-4 col-md-6 portfolio-item filter-app " data-wow-delay="{{1*$num}}s">
             <div class="portfolio-wrap">
-              <img src="{{$post->post_image}}" class="img-fluid" alt="">
+              <img class="img-galeria-posts" src="{{$galery_post->image_galery}}" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4><a href="{{route('post',$post->id)}}">{{Str::limit($post->title,'10','...')}}</a></h4>
-                <p><p>{{Str::limit($post->body,'20','...')}}</p></p>
+                
+                <h4 class="titulo-galeria">{{Str::limit($galery_post->title,'10','...')}}</h4>
                 <div>
-                  <a href="{{$post->post_image}}" data-gall="portfolioGallery" title="{{$post->title}}" class="link-preview venobox"><i class="ion ion-eye"></i></a>
-                  <a href="{{route('post',$post->id)}}" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                  <a href="{{$galery_post->image_galery}}" data-gall="portfolioGallery" title="{{$galery_post->title}}" class="link-preview venobox"><i class="ion ion-eye"></i></a>
                 </div>
                 <div>
-                    <p >{{$post->created_at->diffForHumans()}}</p>
+                    <p >{{$galery_post->created_at->diffForHumans()}}</p>
                 </div>
               </div>
             </div>
           </div>
-        @endforeach
-
-    </div>
-
-    </div>
+          @if(($num+1)%3==0)
+          
+        </div>
+        @endif
+  @endforeach
+  </div>
+      <div class="d-flex">
+        <div class="mx-auto">
+          {{$galeryPosts->links()}} <!-- para la paginacion de los posts ya esta lista esta funcion-->
+        </div>
+      </div>
   </section><!-- End Portfolio Section -->

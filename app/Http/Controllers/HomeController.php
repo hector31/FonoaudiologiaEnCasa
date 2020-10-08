@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\Galery;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,8 +25,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $posts=Post::all();
-        return view('home.index',['posts'=>$posts]);
+        $posts=Post::orderBy('created_at', 'DESC')->limit(15)->get();
+        $galery_posts=Galery::orderBy('created_at', 'DESC')->paginate(6);
+        $galery_posts->fragment('testimonials');
+        return view('home.index',['posts'=>$posts,'galery_posts'=>$galery_posts]);
     }
     public function show_videos(){
         return view('home.blog.videos');

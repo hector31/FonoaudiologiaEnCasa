@@ -30,7 +30,10 @@
                 <textarea name="body" class="form-control" id="body" name="summary-ckeditor"></textarea>
             </div>
             
-            
+            <div class="form-group">
+                <label for="file">Descripcion </label>
+                <textarea name="description" class="form-control" id="description"  cols="30" rows="10"></textarea>
+            </div>
             <button type="submit" class="btn btn-primary">Crear</button>
         </form>
     @endsection

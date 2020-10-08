@@ -9,14 +9,6 @@
             <input type="text" name="title" class="form-control" id="title" aria-describedby="" value="{{$post->title}}" placeholder="Ingresa el titulo">
         </div>
         <div class="form-group">
-            <label for="link">Link</label>
-            <input type="text" name="link" class="form-control" id="link" value="{{$post->link}}" aria-describedby="" placeholder="Ingresa un link (opcional)">
-        </div>
-        <div class="form-group">
-            <label for="video">Video</label>
-            <input type="text" name="video" class="form-control" id="video" value="{{$post->video}}" aria-describedby="" placeholder="Ingresa un link video youtube(opcional)">
-        </div>
-        <div class="form-group">
             <div><img height="100px" src="{{$post->post_image}}" alt=""></div>
             <label for="file">Imagen 1</label>
             <input type="file" name="post_image" class="form-control-file" id="post_image" >
@@ -34,7 +26,10 @@
         <div class="form-group">
             <textarea name="body" class="form-control" id="body"  cols="30" rows="10">{!!$post->body!!}</textarea>
         </div>
-        
+        <div class="form-group">
+            <label for="file">Descripcion </label>
+        <textarea name="description" class="form-control" id="description"  cols="30" rows="10">{{$post->description}}</textarea>
+        </div>
         <button type="submit" class="btn btn-primary">Actualizar</button>
         </form>
         

@@ -624,7 +624,8 @@ section {
   border-radius: 10px;
   margin: 0 10px 40px 10px;
   background: #fff;
-  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+  box-shadow: 0 10px 29px 10px rgba(68, 88, 144, 0.1);
+  box-shadow: 0px 10px 15px -5px #888888;
   transition: all 0.3s ease-in-out;
   text-align: center;
 }
@@ -1694,6 +1695,11 @@ section {
 .contmain{
   padding-top: 190px;
 }
+#hero .intro-info h2 {
+  font-family: 'Ananias';
+  font-size: 2.8em;
+  /* font-weight: 400; */
+}
 
 p,ul {
   font-family: 'tekton-pro',century-gothic;
@@ -1706,7 +1712,7 @@ p,ul {
   font-size: 0.8em;
 }
 #faq #faq-list a{
-  font-family: 'ArchitectsDaughter',century-gothic;
+  font-family: 'tekton-pro','ArchitectsDaughter',century-gothic;
   font-size: 0.9em;
 }
 #services .description {
@@ -1736,7 +1742,7 @@ p,ul {
 @media (max-width: 992px) {
   #hero .intro-info h2 {
  
-    font-size: 40px ;
+    font-size: 1.8em ;
 
   }
   .main-img{

@@ -34,9 +34,7 @@ class PostController extends Controller
             'post_second_image'=>'file',
             'post_third_image'=>'file',
             'body'=>'required',
-            'link'=>'nullable',
-            'video'=>'nullable'
-
+            'description'=>'required'
         ]);
         if(request('post_image')){
             $inputs['post_image']=request('post_image')->store('images_posts');
@@ -88,8 +86,7 @@ class PostController extends Controller
             'post_second_image'=>'file',
             'post_third_image'=>'file',
             'body'=>'required',
-            'link'=>'nullable',
-            'video'=>'nullable'
+            'description'=>'required'
         ]);
         if(request('post_image')){
             $inputs['post_image']=request('post_image')->store('images');
@@ -105,8 +102,7 @@ class PostController extends Controller
         }
         $post->title=$inputs['title'];
         $post->body=$inputs['body'];
-        $post->link=$inputs['link'];
-        $post->video=$inputs['video'];
+        $post->description=$inputs['description'];
 
         $this->authorize('update',$post);
    

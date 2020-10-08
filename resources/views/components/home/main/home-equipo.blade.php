@@ -3,6 +3,7 @@
       <div class="section-header">
         <h3>Equipo</h3>
         {{-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p> --}}
+        <p class="text-team">Conoce los profesionales   que pertenecen a nuestra comunidad</p>
       </div>
 
       <div class="row">
@@ -13,6 +14,7 @@
           <div class="member">
             <img src="{{asset('img/fono/equipo1.png')}}" class="img-fluid" alt="">
             <div class="member-info">
+              
               <div class="member-info-content">
                 <h4>Manuela Estrada Zambrano</h4>
                 <span>Directora de Fonoencasa</span>
@@ -33,7 +35,7 @@
 
         <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="400">
           <div class="member">
-            <img src="img/team-4.jpg" class="img-fluid" alt="">
+            <img src="{{asset('img/fono/equipo2.png')}}" class="img-fluid" alt="">
             <div class="member-info">
               <div class="member-info-content">
                 <h4>Pilar Taramuel</h4>
