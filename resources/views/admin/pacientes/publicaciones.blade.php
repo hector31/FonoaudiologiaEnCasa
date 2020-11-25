@@ -1,8 +1,8 @@
 <x-admin-master>
     @section('content')
-        <h1>Todos los posts</h1>
 
-        
+        <h1>Publicaciones a usuario: {{$user->name}}</h1>
+
         @if (session('message'))
         <div class="alert alert-danger">       
             {{session('message')}}
@@ -19,19 +19,41 @@
             {{session('post-updated-message')}}
         </div> 
         @endif
-         <!-- DataTales Example -->
+
+        <form method="post" action="{{route('publicacion.pacientes.store')}}" enctype="multipart/form-data">
+            @csrf
+            <div class="form-group">
+                <label for="title">Titulo</label>
+                <input type="text" name="title" class="form-control" id="title" aria-describedby="" placeholder="Ingresa el titulo">
+            </div>
+            
+            <div class="form-group">
+                <label for="file">Foto</label>
+                <input type="file" name="post_image" class="form-control-file" id="post_image" >
+                <input type="hidden" name="paciente_id" value="{{$user->id}}">
+            </div>
+            <div class="form-group">
+                <textarea name="body" class="form-control" id="body" name="summary-ckeditor"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="file">Descripcion </label>
+                <textarea name="description" class="form-control" id="description"  cols="30" rows="10"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary mb-4">Crear</button>
+        </form>
+
         <div class="card shadow mb-4">
             <div class="card-header py-3">
               <h6 class="m-0 font-weight-bold text-primary">Posts</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-bordered" id="dataTable2" width="100%" cellspacing="0">
                   <thead>
                     <tr>
                       <th>Id</th>
                       <th>Titulo</th>
-                      <th>Autor</th>
                       <th>Imagen</th>
                       <th>Fecha de creacion</th>
                       <th>Actualizado</th>
@@ -42,7 +64,6 @@
                     <tr>
                       <th>Id</th>
                       <th>Titulo</th>
-                      <th>Autor</th>
                       <th>Imagen</th>
                       <th>Fecha de creacion</th>
                       <th>Actualizado</th>
@@ -50,25 +71,24 @@
                     </tr>
                   </tfoot>
                   <tbody>
-                    @foreach ($posts as $num=>$post)                            
+                    @foreach ($posts as $post)                            
                         <tr>
                             
-                            <td>{{$num+1}}</td>
-                            <td><a href="{{route('posts.edit',$post->id)}}">{{$post->title}}</a></td>
-                            <td>{{$post->user->name}}</td>
+                            <td>{{$post->id}}</td>
+                            <td><a href="{{route('publicacion.pacientes.edit',[$post->id,$user->id])}}">{{$post->title}}</a></td>
                             <td>
                                 <img height="100px" src="{{$post->post_image}}" alt="">
                             </td>
                             <td>{{$post->created_at->diffForHumans()}}</td>
                             <td>{{$post->updated_at->diffForHumans()}}</td>
                             <td>
-                                @can('view', $post)
-                                    <form method="post" action="{{route('posts.destroy',$post->id)}}" enctype="multipart/form-data">
+                                
+                                    <form method="post" action="{{route('publicacion.pacientes.destroy',$post->id)}}" enctype="multipart/form-data">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger">Borrar</button>
                                     </form>
-                                @endcan
+                                
                             </td>
                         </tr>
                     @endforeach
@@ -77,13 +97,7 @@
               </div>
             </div>
           </div>
-          {{-- <div class="d-flex">
-            <div class="mx-auto">
-              {{$posts->links()}} <!-- para la paginacion de los posts ya esta lista esta funcion-->
-            </div>
-          </div> --}}
     @endsection
-
     @section('scripts')
         <!-- Page level plugins -->
         <script src="{{asset('vendor/datatables/jquery.dataTables.min.js')}}"></script>
@@ -93,3 +107,10 @@
         <script src="{{asset('js/demo/datatables-demo.js')}}"></script>
     @endsection
 </x-admin-master>
+<script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+<script>
+    CKEDITOR.replace( 'body', {
+        filebrowserUploadUrl: "{{route('upload', ['_token' => csrf_token() ])}}",
+        filebrowserUploadMethod: 'form'
+    });
+</script>

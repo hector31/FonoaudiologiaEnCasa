@@ -27,7 +27,7 @@ class HomeController extends Controller
     {
         $posts=Post::orderBy('created_at', 'DESC')->limit(15)->get();
         $galery_posts=Galery::orderBy('created_at', 'DESC')->paginate(6);
-        $galery_posts->fragment('testimonials');
+        
         return view('home.index',['posts'=>$posts,'galery_posts'=>$galery_posts]);
     }
     public function show_videos(){

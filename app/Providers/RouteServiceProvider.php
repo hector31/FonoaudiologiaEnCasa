@@ -50,6 +50,9 @@ class RouteServiceProvider extends ServiceProvider
         
         $this->mapGaleryRoutes();
         
+        $this->mapPacientesRoutes();
+
+        
         $this->mapUsersRoutes();
         
         $this->mapPublicRoutes();
@@ -104,6 +107,14 @@ class RouteServiceProvider extends ServiceProvider
             ->namespace($this->namespace)
             ->group(base_path('routes/web/galery.php'));
     }
+    protected function mapPacientesRoutes()
+    {
+        Route::prefix('admin')
+            ->middleware('web')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/web/pacientes.php'));
+    }
+    
     protected function mapUsersRoutes()
     {
         Route::prefix('admin')

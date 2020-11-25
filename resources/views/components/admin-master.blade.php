@@ -58,6 +58,7 @@
       @if (auth()->user()->userHasRole('super admin')||auth()->user()->userHasRole('admin'))
       <x-admin.sidebar.sidebar-posts-links></x-admin.sidebar.sidebar-posts-links>
       <x-admin.sidebar.sidebar-galery-links></x-admin.sidebar.sidebar-galery-links>
+      <x-admin.sidebar.sidebar-pacientes-links></x-admin.sidebar.sidebar-pacientes-links>
       @endif
       @if (auth()->user()->userHasRole('super admin'))
         <x-admin.sidebar.sidebar-users-links></x-admin.sidebar.sidebar-users-links>

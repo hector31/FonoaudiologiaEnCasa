@@ -13,7 +13,7 @@ class PostController extends Controller
 
     public function index(){
         if(auth()->user()->userHasRole('super admin'))
-        $posts=Post::all(); //para todos los posts
+        $posts=Post::orderBy('created_at','DESC')->get(); //para todos los posts
         else
         $posts=auth()->user()->posts;
         return view('admin.posts.index',['posts'=>$posts]);

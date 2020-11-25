@@ -1,6 +1,6 @@
 <x-admin-master>
     @section('content')
-        <h1>Usuarios</h1>
+        <h1>Pacientes</h1>
         @if(session('user-deleted'))
             <div class="alert alert-danger">
                 {{session('user-deleted')}}
@@ -8,7 +8,7 @@
         @endif
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Tabla Usuarios</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Tabla Pacientes</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -16,10 +16,8 @@
                   <thead>
                     <tr>
                       <th>Id</th>
-                      <th>Nombre</th>
-                      <th>Avatar</th>
-                      <th>Fecha de creacion</th>
-                      <th>Actualizado</th>
+                      <th>Paciente</th>
+                      <th>Fonoaudiologa</th>
                       <th>Borrar</th>
                       
                     </tr>
@@ -27,23 +25,24 @@
                   <tfoot>
                     <tr>
                         <th>Id</th>
-                        <th>Nombre</th>
-                        <th>Avatar</th>
-                        <th>Fecha de creacion</th>
-                        <th>Actualizado</th>
+                        <th>Paciente</th>
+                        <th>Fonoaudiologa</th>
                         <th>Borrar</th>
                     </tr>
                   </tfoot>
                   <tbody>
-                    @foreach ($users as $num=>$user)                            
+                    @foreach ($users as $num =>$user)                            
                         <tr>
                             <td>{{$num+1}}</td>
-                            <td><a href="{{route('user.profile.show',$user->id)}}">{{$user->name}}</a></td>
+                            <td><a href="{{route('paciente.profile.show',$user->id)}}">{{$user->name}}</a></td>
                             <td>
-                                <img height="100px" src="{{$user->avatar}}" alt="">
+                                @foreach($fono_paciente as $rel)
+                                    @if($rel->paciente_id==$user->id)
+                                        {{$fono=App\User::find($rel->fono_id)->name}}
+                                    @endif
+                                @endforeach
                             </td>
-                            <td>{{$user->created_at->diffForHumans()}}</td>
-                            <td>{{$user->updated_at->diffForHumans()}}</td>
+                            
                             <td>
                                 <form action="{{route('user.destroy',$user->id)}}" method="post">
                                     @csrf

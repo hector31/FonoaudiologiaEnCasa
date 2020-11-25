@@ -5,13 +5,14 @@ namespace App\Http\Controllers;
 use App\Role;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
 
 
     public function index(){
-        $users=User::all();
+        $users=User::orderBy('created_at', 'DESC')->get();
         return view('admin.users.index',['users'=>$users]);
     }
 

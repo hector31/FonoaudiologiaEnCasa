@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Storage;
 class GaleryController extends Controller
 {
     public function index(){
-        $galery_posts=Galery::all(); //para todos los posts
+        $galery_posts=Galery::orderBy('created_at','DESC')->get(); //para todos los posts
         return view('admin.galery.index',['galery_posts'=>$galery_posts]);
     }
     

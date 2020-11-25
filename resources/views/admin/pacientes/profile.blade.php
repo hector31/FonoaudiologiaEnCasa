@@ -53,6 +53,8 @@
                     <button type="submit" class="btn btn-primary mb-4" >Actualizar</button>
 
                 </form>
+                    
+                    <a  class="btn btn-primary mb-4" href="{{route('pacientes.publicaciones',$user)}}">Publicaciones</a>
             </div>
         </div>
 
@@ -145,6 +147,111 @@
         </div>
         @endif
 
-    
+        @if (auth()->user()->userHasRole('super Admin'))
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Fonoaudiologos</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable2" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Opciones</th>
+                                    <th>Id</th>
+                                    <th>Nombre</th>
+                                    <th>Foto</th>
+                                    <th>Añadir</th>
+                                    <th>Quitar</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>Opciones</th>
+                                    <th>Id</th>
+                                    <th>Nombre</th>
+                                    <th>Foto</th>
+                                    <th>Añadir</th>
+                                    <th>Quitar</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                @foreach ($fonos as $fono)
+                                
+                                <tr>
+                                    <td><input type="checkbox"
+                                        @foreach ($fono_paciente as $rel)     
+                                            @if ($rel->fono_id==$fono->id && $rel->paciente_id == $user->id )
+                                                checked
+                                            @endif
+                                            
+                                        @endforeach
+                                            
+                                        
+                                        >
+                                       
+
+                                    </td>
+                                    <td>{{$fono->id}}</td>
+                                    <td><a href="{{route('user.profile.show',$fono->id)}}">{{$fono->name}}</a></td>
+                                    <td>
+                                        <img height="100px" src="{{$fono->avatar}}" alt="">
+                                        
+                                    </td>
+                                    <td>
+                                        <form method="post" action="{{route('paciente.role.attach',$fono)}}">
+                                            @method('PUT')
+                                            @csrf
+                                            <input type="hidden" name="paciente" value="{{$user->id}}">
+                                            <button 
+                                            type="submit" 
+                                            class="btn btn-primary"
+                                            @foreach ($fono_paciente as $rel)     
+                                                @if(($rel->fono_id==$fono->id and $rel->paciente_id == $user->id) )
+                                                    disabled
+                                                @endif
+                                            @endforeach
+                                            >Asignar</button>
+                                        </form>    
+                                        
+                                    
+                                    
+                                    </td>
+                                    <td>
+                                        <form method="post" action="{{route('paciente.role.detach',$fono)}}">
+                                            @method('PUT')
+                                            @csrf
+                                            <input type="hidden" name="paciente" value="{{$user->id}}">
+                                            <button type="submit" class="btn btn-danger"    
+                                            @foreach ($fono_paciente as $rel)     
+                                                @if(($rel->fono_id!=$fono->id and $rel->paciente_id == $user->id) )
+                                                    disabled
+                                                @endif
+                                            @endforeach
+                                            >Quitar</button>
+                                        </form>    
+
+                                    </td>
+                                    
+                                </tr>
+                                @endforeach
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endif
+    @endsection
+    @section('scripts')
+        <!-- Page level plugins -->
+        <script src="{{asset('vendor/datatables/jquery.dataTables.min.js')}}"></script>
+        <script src="{{asset('vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
+
+        <!-- Page level custom scripts -->
+        <script src="{{asset('js/demo/datatables-demo.js')}}"></script>
     @endsection
 </x-admin-master>

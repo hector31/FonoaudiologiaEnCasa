@@ -43,7 +43,7 @@
         <div class="modal-body">Seleccion "Salir" si quiere finalizar la sesion actual.</div>
         <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-            <form action="/logout" method="post">
+            <form action="{{ route('logout') }}" method="post">
                 @csrf
                 <button class="btn btn-danger">Salir</button>
             </form>
