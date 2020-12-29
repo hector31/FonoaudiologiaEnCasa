@@ -17,7 +17,7 @@
 
   <!-- Custom styles for this template-->
   <link href="{{asset('css/sb-admin-2.css')}}" rel="stylesheet">
-
+  @yield('csss')
 </head>
 
 <body id="page-top">
@@ -55,6 +55,10 @@
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
+      @if (auth()->user()->userHasRole('paciente'))
+     
+      <x-admin.sidebar.sidebar-mis-publicaciones-links></x-admin.sidebar.sidebar-mis-publicaciones-links>
+      @endif
       @if (auth()->user()->userHasRole('super admin')||auth()->user()->userHasRole('admin'))
       <x-admin.sidebar.sidebar-posts-links></x-admin.sidebar.sidebar-posts-links>
       <x-admin.sidebar.sidebar-galery-links></x-admin.sidebar.sidebar-galery-links>

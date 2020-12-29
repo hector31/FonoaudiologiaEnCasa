@@ -43,6 +43,20 @@ class PublicacionesPacientesController extends Controller
         
         return view('admin.pacientes.edit',['post'=>$post,'user'=>$user]);
     }
+    public function show(User $user){
+        // $this->authorize('view',$post);
+        $posts=$user->publicacion_paciente()->orderBy('created_at', 'DESC')->get();
+        return view('admin.pacientes.show-publicacion',['posts'=>$posts,'user'=>$user]);
+    }
+    public function show_one(publicaciones_pacientes $post){
+        // $this->authorize('view',$post);
+        return view('admin.pacientes.show-one-publicacion',['post'=>$post]);
+    }
+    public function show_mis_publicaciones(){
+        $user=auth()->user();
+        $posts=$user->publicacion_paciente()->orderBy('created_at', 'DESC')->get();
+        return view('admin.pacientes.show-publicacion',['posts'=>$posts,'user'=>$user]);
+    }
 
     public function update(publicaciones_pacientes $post,User $user){
         $inputs=request()->validate([

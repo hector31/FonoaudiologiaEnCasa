@@ -2,7 +2,7 @@
     @section('content')
 
         <h1>Publicaciones a usuario: {{$user->name}}</h1>
-
+        
         @if (session('message'))
         <div class="alert alert-danger">       
             {{session('message')}}
@@ -87,6 +87,7 @@
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger">Borrar</button>
+                                        <a  class="btn btn-primary mb-4" href="{{route('post.one.publicacion.show',$post->id)}}">Mirar Preview</a>
                                     </form>
                                 
                             </td>
